@@ -2,7 +2,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 250px auto;
+    grid-template-columns: 200px auto;
     grid-template-rows: auto 100px;
     width: 100%;
     height: 100vh;
@@ -13,11 +13,12 @@
 .sidebar {
     background-color: black;
     display: flex;
+    min-height: 0px;
     flex-direction: column;
 }
 
 .main_content {
-    background-color: blueviolet;
+    background-color: #141922;
 }
 
 .player {
@@ -31,8 +32,8 @@
                     Sidebar items styling
 ***************************************************************/
 .logo_wrapper {
-    padding: 0.5rem;
-    padding-right: 5rem;
+    padding: 0.5rem 0;
+    padding-right: 6rem;
 }
 .sidebar:first-child {
     padding: 0 1rem;
@@ -62,6 +63,12 @@
 .sidebar ul li a:hover {
     color: white;
 }
+
+.playlist {
+    overflow-y: auto;
+}
+
+
 
 #space {
     flex-grow: 2;
@@ -96,7 +103,126 @@
                             MAIN CONTENT 
 *************************************************************************/
 .upgrade {
-    height: 100px;
+    padding: 1rem 0;
     width: 100%;
     background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: row-reverse;
 }
+
+.premium_btn {
+    border: 2px solid white;
+    color: white;
+    border-radius: 35px;
+    width: fit-content;
+    height: fit-content;
+    padding: .5rem;
+    align-self: center;
+    margin-right: 2rem;
+}
+
+.upgrade .premium_btn a{
+    color: white;
+    text-decoration: none;
+}
+.upgrade .premium_btn:hover {
+    transform: scale(1.1);
+}
+
+/***************MUSIC WINDOW START STYLING***************************/
+
+.ul_menu {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.ul_menu li  {
+    padding: 0 1rem;
+}
+.ul_menu li a {
+    color: #797b80;
+    text-decoration: none;
+}
+.ul_menu li a:hover {
+    color: white;
+}
+
+/* MAIN WINDOW CONTENT STARTING STYLE */
+
+.main_container {
+    padding: 0 1rem;
+}
+
+.main_container section h1 {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+/* **********************************************************
+                flex row & card style start 
+*/
+
+.proposed {
+    /* background-color: aqua; */
+    /* width: 100%; */
+    height: auto;
+    display: flex;
+
+}
+.card {
+    height: auto;
+    max-width: 12rem;
+    margin-right: .5rem;
+    text-align: center;
+    color: #797b80;
+}
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h4 {
+    color: white;
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
