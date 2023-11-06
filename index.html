@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
+    <!-- font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap" rel="stylesheet">
 
+
+    <!-- cdn icons -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- style css page -->
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -231,7 +239,7 @@
                     <div class="proposed">
 
 
-                        <!-- Release Radar -->
+                        <!-- Lana del Ray -->
 
 
                         <div class="card">
@@ -239,7 +247,9 @@
 
                                 <img src="spotify(4)/spotify/img/youg.jpeg" alt="Young & Beautiful">
 
-
+                                <div class="play_focus">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
 
                             </div>
 
@@ -248,7 +258,7 @@
                             <div class="card_subtitle">Lana del Ray</div>
                         </div>
 
-                        <!-- Daily Mix 1 -->
+                        <!-- Einaudi -->
 
                         <div class="card">
                             <div class="round_cover_img">
@@ -268,13 +278,99 @@
 
         </div>
 
+
+                <!--------- PLAYER BAR ---------------->
+
+
+
         <div class="player">
 
 
             <div class="play_wrapper">
-                <div id="playing_now"></div>
-                <div></div>
-                <div></div>
+
+                <!-- left side of the player bar -->
+
+                <div id="left">
+
+                    <div id="playing_now">
+
+                        <!-- albumm image -->
+
+                        <div class="miniature">
+                            <img src="spotify(4)/spotify/img/sinister.jpeg" alt="sinister">
+                        </div>
+                        
+                        <!-- track name -->
+
+                        <div class="current_track">
+                            <div class="artist">Sinister</div>
+                            <div class="track_name">Brano nome</div>
+                        </div>
+
+                    </div>
+
+                    <div id="favourite">
+                        <i class="fa-regular fa-heart"></i>
+                        
+                        <i class="fa-regular fa-folder"></i>
+                    </div>
+
+                </div>
+
+                <!-- central part of the player bar -->
+
+                <div id="central">
+
+                    <div id="central_wrapper">
+
+                        <div id="top_icons">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-forward-step"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+
+                        <div id="progress_bar">
+
+                            <div class="timer">0:25</div>
+
+                            <div class="entire">
+
+                                <div class="processed">
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="total">4:35</div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <!-- right side of the player bar -->
+
+
+                <div id="right">
+
+                    <div class="right_section_icons">
+                        <i class="fa-solid fa-list-ul"></i>
+                        <i class="fa-solid fa-display"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
+
+                    <div id="volume">
+                        <div class="volume_set">
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
