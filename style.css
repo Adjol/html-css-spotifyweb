@@ -7,7 +7,7 @@
 .container {
     display: grid;
     grid-template-columns: 200px auto;
-    grid-template-rows: auto 100px;
+    grid-template-rows: auto 4rem;
     width: 100%;
     height: 100vh;
 }
@@ -16,6 +16,7 @@
 ***************************************************************/
 .sidebar {
     background-color: black;
+    max-height: calc(100vh - 4rem);
     display: flex;
     min-height: 0px;
     flex-direction: column;
@@ -23,21 +24,25 @@
 
 .main_content {
     background-color: #141922;
+    min-height: 0px;
+    max-height: calc(100vh - 4rem);
+
 }
 
 .player {
     background-color: brown;
     grid-area: 2 / 1 / 3 / 3;
-    min-height: 100px;
+    height: 4rem;
     position: sticky;
     bottom: 0;
+    right: 0;
 }
 /**************************************************************
                     Sidebar items styling
 ***************************************************************/
 .logo_wrapper {
     padding: 0.5rem 0;
-    padding-right: 6rem;
+    padding-right: 4rem;
 }
 .sidebar:first-child {
     padding: 0 1rem;
@@ -75,7 +80,7 @@
 
 
 #space {
-    flex-grow: 2;
+    flex-grow: 1;
 }
 
 
@@ -159,11 +164,14 @@
 
 .main_container {
     padding: 0 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
 }
 
 .main_container section h1 {
     color: white;
     padding-bottom: 1rem;
+    margin: 2rem 0 1rem 0;
 }
 
 /* **********************************************************
@@ -175,31 +183,77 @@
     /* width: 100%; */
     height: auto;
     display: flex;
-
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    align-content: flex-start;
+    row-gap: 1rem;
+    padding-bottom: 4rem;
 }
 .card {
-    height: auto;
-    max-width: 12rem;
+    height: fit-content;
+    flex-basis: 10rem;
+    max-width: 300px;
     margin-right: .5rem;
     text-align: center;
     color: #797b80;
+    flex-grow: 2;
+
+    
 }
 .card img {
     max-width: 100%;
     height: auto;
+    
 }
+
+
+
 
 .card h4 {color: white;}
 
+.card_title {
+    height: fit-content;
+    padding: 1rem 0;
+}
 
 
+.round_cover_img {
+    object-fit: cover;
+}
+
+.round_cover_img img {
+    border-radius: 50%;
+}
 
 
+.cover_img {
+    position: relative;
+}
+
+.cover_img:hover .play_focus {
+    display: block;
+}
 
 
+.play_focus {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: #0000006e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
 
-
-
+.fa-circle-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    color: white;
+    transform: translate(-50%, -50%);
+}
 
 
 
